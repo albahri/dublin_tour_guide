@@ -10,13 +10,17 @@ Rails.application.routes.draw do
   devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admins/sessions"}
   
-  authenticated :user do
-    root to: "home#userspage" 
-  end
+  # authenticated :user do
+  #   root to: "home#userspage" 
+  # end
 
-  authenticated :admin do
-    root to: "home#adminspage"
-  end
+  
+   root :to => "home#index"
+
+
+  # authenticated :admin do
+  #   root to: "home#adminspage"
+  # end
   
   # root to: "home#userspage"
   # The priority is based upon order of creation: first created -> highest priority.
