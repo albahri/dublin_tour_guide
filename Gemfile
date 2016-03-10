@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# gem "therubyracer"
+# gem "less_rails"
+# gem "twitter-bootstrap-rails"
+
 gem 'zurb-foundation'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :guides
   # get 'home/userspage'
 
   # get 'home/adminspage'
 
   resources :home
   devise_for :users, path_names: {sign_in: "signin", sign_out: "logout", sign_up: "signup"}
-
+  resources :users
   devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admins/sessions"}
   

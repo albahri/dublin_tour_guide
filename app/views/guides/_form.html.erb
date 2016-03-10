@@ -1,0 +1,38 @@
+<%= form_for(@guide) do |f| %>
+  <% if @guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
+
+      <ul>
+      <% @guide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">Audio Guide:
+  <%= check_box_tag'guide[audio]','audio'%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
