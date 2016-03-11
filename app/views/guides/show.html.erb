@@ -20,5 +20,15 @@
   <%= @guide.language %>
 </p>
 
+<p>
+  <strong>Cost:</strong>
+  <%= @guide.cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @guide.description %>
+</p>
+
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
 <%= link_to 'Back', guides_path %>

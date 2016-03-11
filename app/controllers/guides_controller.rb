@@ -37,7 +37,7 @@ class GuidesController < ApplicationController
     
     
     #create an instance/object of a BasicGuide
-    myGuide = BasicGuide.new(50, @guide.place, @guide.date, @guide.time, @guide.language)
+    myGuide = BasicGuide.new(50, @guide.place, @guide.date, @guide.time, @guide.language )
 
     #add the wxtra features to the new Guide 
     if params[:guide][:audio].to_s.length > 0 then 

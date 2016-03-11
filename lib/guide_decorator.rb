@@ -16,9 +16,7 @@ class BasicGuide
 		return @place
 	end
 
-	def description
-		return @place +";"+ @date +";"+ @time +";"+ @language +": #{@cost}"
-	end
+	
 end
 
 #decorator class -- this serves as the superclass for all the concrete decorators
@@ -36,9 +34,7 @@ class GuideDecorator
 		return  @extra_cost + @real_guide.cost
 	end
 
-	def description
-		return @place +";"+ @date +";"+ @time +";"+ @language + " " +@real_guide.description 
-	end
+	
 end 
 
 #a concrete decorator
@@ -48,9 +44,6 @@ class  AudioGuideDecorator < GuideDecorator
 		@extra_cost = 10
 	end 
 
-	def description
-		return  @real_guide.description + ": #{@extra_cost} + "  
-	end
 end
 
 
