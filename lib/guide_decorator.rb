@@ -12,7 +12,11 @@ class BasicGuide
 		return @cost
 	end 
 
-	def details
+	def place
+		return @place
+	end
+
+	def description
 		return @place +";"+ @date +";"+ @time +";"+ @language +": #{@cost}"
 	end
 end
@@ -24,12 +28,16 @@ class GuideDecorator
 		@extra_cost = 0
 	end
 
+	def place
+		return @real_guide.place
+	end
+
 	def cost
 		return  @extra_cost + @real_guide.cost
 	end
 
-	def details
-		return @place +";"+ @date +";"+ @time +";"+ @language + " " +@real_guide.details 
+	def description
+		return @place +";"+ @date +";"+ @time +";"+ @language + " " +@real_guide.description 
 	end
 end 
 
@@ -40,8 +48,8 @@ class  AudioGuideDecorator < GuideDecorator
 		@extra_cost = 10
 	end 
 
-	def details
-		return  @real_guide.details + ": #{@extra_cost} + "  
+	def description
+		return  @real_guide.description + ": #{@extra_cost} + "  
 	end
 end
 

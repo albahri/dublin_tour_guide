@@ -27,6 +27,15 @@
     <%= f.label :language %><br>
     <%= f.text_field :language %>
   </div>
+  <div class="field">
+    
+    <%= f.hidden_field :cost %>
+  </div>
+   <div class="field">
+    
+    <%= f.hidden_field :description %>
+  </div>
+
 
   <div class="field">Audio Guide:
   <%= check_box_tag'guide[audio]','audio'%>
